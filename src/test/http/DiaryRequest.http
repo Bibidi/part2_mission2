@@ -1,0 +1,32 @@
+### create Diary
+POST http://localhost:8080/create/diary?date=2022-05-23
+Content-Type: application/json
+
+{"text": "오늘 코딩이 너무 재밌었다"}
+
+
+### read Diary
+GET http://localhost:8080/read/diary?date=4000-05-20
+
+### failed read Diary
+GET http://localhost:8080/read/diary?date=invalid
+
+### read Diaries
+GET http://localhost:8080/read/diaries?startDate=2022-05-20&endDate=2022-05-27
+
+### put Diary
+PUT http://localhost:8080/update/diary?date=2022-05-20
+Content-Type: application/json
+
+{"text": "test"}
+
+### delete Diary
+DELETE http://localhost:8080/delete/diary?date=2022-05-20
+
+
+
+### create Order
+PUT http://localhost:8080/order
+Content-Type: application/json
+
+{"orderId" : "123", "orderAmount" : "1000"}
